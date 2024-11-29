@@ -7,14 +7,16 @@ phases:
     commands:
       - echo "Installing dependencies..."
 
+
   pre_build:
     commands:
       - echo "Running pre-build phase..."
-      - mvn clean
+     
 
   build:
     commands:
       - echo "Building the application..."
+      - mvn package
       - echo "Build completed successfully!"
 
   post_build:
