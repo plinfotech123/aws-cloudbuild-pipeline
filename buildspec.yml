@@ -6,7 +6,6 @@ phases:
       java: corretto17 # Use the desired version of Java
     commands:
       - echo "Installing dependencies..."
-      - mvn install -DskipTests
 
   pre_build:
     commands:
@@ -16,7 +15,6 @@ phases:
   build:
     commands:
       - echo "Building the application..."
-      - mvn package -DskipTests
       - echo "Build completed successfully!"
 
   post_build:
