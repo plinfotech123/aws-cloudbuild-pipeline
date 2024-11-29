@@ -30,11 +30,3 @@ artifacts:
     - build-output/**/* # Includes all files in the build-output directory
   discard-paths: yes
 
-
-
-
-  arn:aws(-[\w]+)*:iam::[0-9]{12}:role/.*
-  
-  arn:aws:iam::730335498290:instance-profile/aws-code-pipeline-full-access
-  
-  arn:aws:iam::123456789012:role/codepipelinebuildrole1
