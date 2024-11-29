@@ -30,3 +30,4 @@ artifacts:
     - build-output/**/* # Includes all files in the build-output directory
   discard-paths: yes
 
+
