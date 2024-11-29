@@ -1,0 +1,33 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17 # Use the desired version of Java
+    commands:
+      - echo "Installing dependencies..."
+      - mvn install -DskipTests
+
+  pre_build:
+    commands:
+      - echo "Running pre-build phase..."
+      - mvn clean
+
+  build:
+    commands:
+      - echo "Building the application..."
+      - mvn package -DskipTests
+      - echo "Build completed successfully!"
+
+  post_build:
+    commands:
+      - echo "Post-build phase..."
+      - echo "Copying the JAR file to the output directory..."
+      - cp target/course-service.jar build-output/
+
+artifacts:
+  files:
+    - build-output/**/* # Includes all files in the build-output directory
+  discard-paths: yes
+
+
